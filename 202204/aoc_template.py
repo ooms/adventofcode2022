@@ -46,16 +46,8 @@ def part2(data):
     for pairs in data:
         left = pairs[0]
         right = pairs[1]
-        l_array = []
-        r_array = []
-        i = left[0]
-        while i <= left[1]:
-            l_array.append(i)
-            i += 1
-        i = right[0]
-        while i <= right[1]:
-            r_array.append(i)
-            i += 1
+        l_array = make_array(left[0],left[1])
+        r_array = make_array(right[0],right[1])
         overlap = np.intersect1d(l_array,r_array)
         if len(overlap) > 0:
             sum += 1
