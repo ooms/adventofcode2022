@@ -1,0 +1,6 @@
+# to activate the virtual environment
+PS> venv\scripts\activate
+(venv> PS>
+# to deactivate the virtual environment
+(venv) PS> deactivate
+PS>

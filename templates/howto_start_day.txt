@@ -1,0 +1,34 @@
+# start by copying the tempate files to the new directory <year><day>
+
+copy template-aoc/ 202201
+
+# go to your new directory
+
+cd 202201
+
+#rename your files
+
+mv aoc_template.py aoc202201.py
+mv test_aoc_template.py test_aoc202201.py
+
+# create example1.txt file from the example in the puzzle
+# create input.txt for your personalized input by calling make_input with current year and day
+
+python make_input.py 2022 01
+
+# make the needed adjustments in the test class
+
+import aoc202201 as aoc
+
+#remove pytest.mark.skip lines and add the right entries for the asserts ...
+
+assert example1 == [..,..,..]
+assert aoc.part1(example1) == ...
+
+#run pytest
+pytest
+
+#if all is green, run it with input.txt
+python aoc202201.py example1.text input.txt
+
+#copy the answer from the input into the puzzle answer field
